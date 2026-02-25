@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 const navigation = [
-  { name: "Inicio", href: "/" },
+  { name: "Problema", href: "/#problema" },
+  { name: "Solución", href: "/#solucion" },
+  { name: "Beneficios", href: "/#beneficios" },
   { name: "Servicios", href: "/#servicios" },
-  { name: "Nosotros", href: "/#nosotros" },
   { name: "Contacto", href: "/#contacto" },
 ];
 
@@ -11,8 +12,12 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container row-between">
-        <Link className="brand" href="/" aria-label="Ir a la página de inicio de Viena Co">
-          Viena Co
+        <Link
+          className="brand"
+          href="/"
+          aria-label="Ir a la página principal de Concesiones Viena y Co"
+        >
+          Concesiones Viena & Co.
         </Link>
         <nav aria-label="Navegación principal">
           <ul className="nav-list">

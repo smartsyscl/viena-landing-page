@@ -1,36 +1,29 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
-
-const siteUrl = "https://www.vienaco.com";
+const siteUrl = "https://www.concesionesviena.cl";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Viena Co | Soluciones corporativas estratégicas",
-    template: "%s | Viena Co",
+    default: "Concesiones Viena & Co. | Concesión de cafetería escolar inteligente",
+    template: "%s | Concesiones Viena & Co.",
   },
   description:
-    "Viena Co impulsa empresas con consultoría estratégica, transformación digital y soluciones corporativas de alto impacto.",
+    "Concesiones Viena & Co. ayuda a colegios de Chile a modernizar su cafetería escolar con concesión profesional y sistema inteligente de compra con pulsera.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
-    locale: "es_ES",
+    locale: "es_CL",
     url: siteUrl,
-    siteName: "Viena Co",
-    title: "Viena Co | Soluciones corporativas estratégicas",
+    siteName: "Concesiones Viena & Co.",
+    title: "Concesiones Viena & Co. | Solución moderna para cafeterías escolares",
     description:
-      "Consultoría corporativa y transformación digital para organizaciones que buscan resultados medibles y sostenibles.",
+      "Servicio integral para colegios y sostenedores: operación de cafetería escolar + plataforma digital de compra con pulsera.",
   },
   robots: {
     index: true,
@@ -41,21 +34,13 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Viena Co",
+  name: "Concesiones Viena & Co.",
   url: siteUrl,
-  logo: `${siteUrl}/logo.png`,
   description:
-    "Firma corporativa especializada en estrategia, crecimiento y transformación digital.",
-  sameAs: [
-    "https://www.linkedin.com/company/vienaco",
-    "https://x.com/vienaco",
-  ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "customer support",
-    email: "contacto@vienaco.com",
-    availableLanguage: ["Spanish", "English"],
-  },
+    "Empresa chilena especializada en concesión de cafeterías escolares y sistemas inteligentes de compra para colegios.",
+  areaServed: "CL",
+  email: "contacto@concesionesviena.cl",
+  telephone: "+56 9 7654 3210",
 };
 
 export default function RootLayout({
@@ -64,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={inter.variable}>
+    <html lang="es-CL">
       <body>
         <a className="skip-link" href="#main-content">
           Saltar al contenido principal
