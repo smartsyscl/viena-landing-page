@@ -12,12 +12,11 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container row-between">
-        <Link
-          className="brand"
-          href="/"
-          aria-label="Ir a la página principal de Concesiones Viena y Co"
-        >
-          Concesiones Viena & Co.
+        <Link className="brand" href="/" aria-label="Ir a la página principal de Concesiones Viena y Co">
+          <span className="logo-placeholder" aria-hidden="true">
+            LOGO
+          </span>
+          <span>Concesiones Viena & Co.</span>
         </Link>
         <nav aria-label="Navegación principal">
           <ul className="nav-list">

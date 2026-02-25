@@ -3,173 +3,168 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Concesión de cafetería escolar en Chile",
   description:
-    "Landing corporativa para captar colegios: concesión de cafetería escolar y sistema inteligente de compra con pulsera para una gestión más eficiente.",
+    "Solución institucional para colegios: concesión de cafetería escolar con sistema inteligente de compra y control operativo.",
   alternates: {
     canonical: "/",
   },
 };
 
 const whatsappUrl =
-  "https://wa.me/56976543210?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20concesi%C3%B3n%20de%20cafeter%C3%ADa%20escolar.";
+  "https://wa.me/56976543210?text=Hola%2C%20quiero%20coordinar%20una%20reuni%C3%B3n%20sobre%20concesi%C3%B3n%20de%20cafeter%C3%ADa%20escolar.";
 
 export default function HomePage() {
   return (
     <>
-      <section className="hero section" id="inicio" aria-labelledby="hero-title">
+      <section className="hero section" id="inicio" aria-labelledby="hero-title" data-animate>
         <div className="container stack-md">
-          <p className="eyebrow">Concesión de cafetería escolar para colegios en Chile</p>
+          <p className="eyebrow">Solución institucional para colegios en Chile</p>
           <h1 id="hero-title">
-            Modernizamos la cafetería de tu colegio con operación profesional y compra con
-            pulsera.
+            Profesionalizamos la cafetería escolar con una operación integral y trazable.
           </h1>
           <p className="lead">
-            En Concesiones Viena & Co. ayudamos a sostenedores y directivos a mejorar la
-            experiencia alimentaria, ordenar la operación y obtener trazabilidad en cada
-            compra.
+            Concesiones Viena & Co. integra servicio de concesión y tecnología para que
+            sostenedores y equipos directivos gestionen la alimentación escolar con más
+            control, eficiencia y estándares modernos.
           </p>
           <a className="cta" href="#contacto">
-            Solicitar reunión comercial
+            Solicitar reunión institucional
           </a>
         </div>
       </section>
 
-      <section className="section" id="problema" aria-labelledby="problema-title">
+      <section className="section" id="problema" aria-labelledby="problema-title" data-animate>
         <div className="container stack-sm">
-          <h2 id="problema-title">El problema actual en cafeterías escolares</h2>
+          <h2 id="problema-title">El desafío actual en cafeterías escolares</h2>
           <p>
-            Muchos colegios enfrentan filas extensas, baja trazabilidad en compras, cobros
-            manuales y poca visibilidad para la gestión. Esto afecta la operación diaria,
-            la convivencia escolar y el control administrativo.
+            En muchos establecimientos persisten procesos manuales, poca visibilidad de los
+            consumos, tiempos de atención extensos y dificultad para controlar la operación
+            diaria. Esto limita la toma de decisiones y afecta la experiencia de la comunidad.
           </p>
         </div>
       </section>
 
-      <section className="section surface" id="solucion" aria-labelledby="solucion-title">
+      <section className="section surface" id="solucion" aria-labelledby="solucion-title" data-animate>
         <div className="container stack-sm">
           <h2 id="solucion-title">Nuestra solución integral</h2>
           <p>
-            Integramos concesión de cafetería escolar con un sistema digital de compra por
-            pulsera. El colegio obtiene servicio alimentario confiable y una plataforma
-            inteligente para controlar consumos y optimizar la gestión.
+            Combinamos concesión profesional de cafetería escolar con un sistema digital de
+            compra con pulsera para ordenar flujos, mejorar trazabilidad y entregar reportes
+            útiles para la gestión del colegio.
           </p>
         </div>
       </section>
 
-      <section className="section" id="funcionamiento" aria-labelledby="funcionamiento-title">
+      <section className="section" id="funcionamiento" aria-labelledby="funcionamiento-title" data-animate>
         <div className="container">
           <h2 id="funcionamiento-title">Cómo funciona</h2>
           <ol className="steps">
             <li>
-              <h3>1. Diagnóstico del establecimiento</h3>
-              <p>Levantamos flujos operativos, capacidad y objetivos del colegio.</p>
+              <h3>1. Diagnóstico institucional</h3>
+              <p>Analizamos operación, objetivos y requerimientos del establecimiento.</p>
             </li>
             <li>
-              <h3>2. Implementación de la concesión</h3>
-              <p>Operamos la cafetería con estándares de servicio y control definidos.</p>
+              <h3>2. Implementación del modelo de concesión</h3>
+              <p>Operamos la cafetería con procesos, protocolos y seguimiento continuo.</p>
             </li>
             <li>
-              <h3>3. Activación del sistema con pulsera</h3>
+              <h3>3. Activación del sistema digital</h3>
               <p>
-                Habilitamos la compra digital para trazabilidad, rapidez en atención y
-                reportes de gestión.
+                Habilitamos compras con pulsera y panel de control para trazabilidad y
+                visibilidad administrativa.
               </p>
             </li>
             <li>
-              <h3>4. Seguimiento continuo</h3>
-              <p>
-                Entregamos soporte, métricas y mejoras para asegurar un servicio sostenible.
-              </p>
+              <h3>4. Mejora continua</h3>
+              <p>Entregamos soporte y métricas para optimizar el servicio en el tiempo.</p>
             </li>
           </ol>
         </div>
       </section>
 
-      <section className="section surface" id="beneficios" aria-labelledby="beneficios-title">
+      <section className="section surface" id="beneficios" aria-labelledby="beneficios-title" data-animate>
         <div className="container">
-          <h2 id="beneficios-title">Beneficios para el colegio</h2>
+          <h2 id="beneficios-title">Beneficios para el colegio y sostenedor</h2>
           <div className="cards">
             <article className="card">
-              <h3>Control y trazabilidad</h3>
-              <p>Reportes claros para directivos y sostenedores en tiempo real.</p>
+              <h3>Gestión con datos</h3>
+              <p>Información clara para decisiones estratégicas y seguimiento operativo.</p>
             </article>
             <article className="card">
-              <h3>Eficiencia operativa</h3>
-              <p>Menos filas, atención más rápida y procesos ordenados.</p>
+              <h3>Operación eficiente</h3>
+              <p>Flujos más ordenados, menor fricción y mayor continuidad del servicio.</p>
             </article>
             <article className="card">
-              <h3>Experiencia moderna</h3>
+              <h3>Propuesta institucional moderna</h3>
               <p>
-                Tecnología de compra con pulsera alineada con los estándares actuales.
+                Un modelo alineado con estándares actuales de administración escolar.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section className="section" id="servicios" aria-labelledby="servicios-title">
+      <section className="section" id="servicios" aria-labelledby="servicios-title" data-animate>
         <div className="container">
           <h2 id="servicios-title">Servicios</h2>
           <div className="cards">
             <article className="card">
               <h3>Concesión integral de cafetería</h3>
-              <p>Operación completa, supervisión y mejora continua del servicio.</p>
+              <p>Administración operativa del servicio bajo estándares definidos.</p>
             </article>
             <article className="card">
               <h3>Sistema inteligente de compra</h3>
-              <p>
-                Plataforma digital con pulsera para pagos y control administrativo.
-              </p>
+              <p>Compra con pulsera y herramientas de control para el establecimiento.</p>
             </article>
             <article className="card">
-              <h3>Soporte y analítica</h3>
-              <p>Indicadores para tomar decisiones con datos reales del servicio.</p>
+              <h3>Soporte y mejora de gestión</h3>
+              <p>Monitoreo, análisis y acompañamiento para sostener resultados.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section className="section surface" id="empresa" aria-labelledby="empresa-title">
+      <section className="section surface" id="empresa" aria-labelledby="empresa-title" data-animate>
         <div className="container stack-sm">
           <h2 id="empresa-title">Sobre Concesiones Viena & Co.</h2>
           <p>
-            Somos una empresa chilena enfocada en resolver la alimentación escolar desde
-            una mirada operativa y tecnológica. Combinamos experiencia en concesiones con
-            herramientas digitales para apoyar a colegios y sostenedores.
+            Somos una empresa chilena con enfoque B2B institucional. Diseñamos soluciones
+            para colegios y sostenedores que buscan una cafetería escolar profesional,
+            medible y alineada con una gestión moderna.
           </p>
         </div>
       </section>
 
-      <section className="section" id="testimonios" aria-labelledby="testimonios-title">
+      <section className="section" id="testimonios" aria-labelledby="testimonios-title" data-animate>
         <div className="container">
           <h2 id="testimonios-title">Testimonios</h2>
           <div className="cards testimonials">
             <blockquote className="card">
               <p>
-                “Mejoramos nuestros tiempos de atención y ahora contamos con trazabilidad
-                diaria para la gestión del casino.”
+                “Hoy contamos con indicadores de operación y trazabilidad semanal para
+                reuniones de gestión con el sostenedor.”
               </p>
               <cite>Dirección Administrativa, colegio particular subvencionado</cite>
             </blockquote>
             <blockquote className="card">
               <p>
-                “El sistema con pulsera nos permitió ordenar el proceso y profesionalizar el
-                servicio sin complejidad para el equipo.”
+                “La implementación fue ordenada y fortaleció nuestra propuesta institucional
+                de alimentación escolar.”
               </p>
-              <cite>Sostenedor, red de establecimientos educacionales</cite>
+              <cite>Rectoría, establecimiento educacional en la RM</cite>
             </blockquote>
           </div>
         </div>
       </section>
 
-      <section className="section cta-band" id="contacto" aria-labelledby="contacto-title">
+      <section className="section cta-band" id="contacto" aria-labelledby="contacto-title" data-animate>
         <div className="container stack-sm">
-          <h2 id="contacto-title">Conversemos sobre la cafetería de tu colegio</h2>
+          <h2 id="contacto-title">Conversemos sobre la cafetería de tu establecimiento</h2>
           <p>
-            Agenda una reunión comercial y conoce cómo implementar una solución integral,
-            moderna y escalable en tu establecimiento.
+            Coordina una reunión para evaluar un modelo de concesión integral y conocer cómo
+            digitalizar la gestión del servicio.
           </p>
           <a className="cta whatsapp" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-            Escribir por WhatsApp
+            Contactar por WhatsApp
           </a>
         </div>
       </section>
