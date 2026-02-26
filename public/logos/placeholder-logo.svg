@@ -1,9 +1,19 @@
-<svg width="220" height="44" viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
-  <title id="logoTitle">Placeholder logo Concesiones Viena y Co</title>
-  <desc id="logoDesc">Logotipo temporal con icono y nombre corporativo.</desc>
-  <rect x="0.5" y="0.5" width="43" height="43" rx="8" fill="#FFF7EA" stroke="#FFB32C"/>
-  <path d="M13 28L22 15L31 28" stroke="#272829" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="22" cy="13.5" r="2.2" fill="#FFB32C"/>
-  <text x="54" y="18" fill="#272829" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.7">CONCESIONES</text>
-  <text x="54" y="33" fill="#272829" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Viena &amp; Co.</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 340.47 44.93">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #ffb32c;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M46.73,3.34l-16.17,38.25h-12.68L1.7,3.34h13.88l9.12,22.35L34.05,3.34h12.68Z"/>
+  <path class="st0" d="M46.9,3.34h12.9v38.25h-12.9V3.34Z"/>
+  <path class="st0" d="M96.73,31.86v9.73h-31.8V3.34h31.09v9.73h-18.42v4.48h16.17v9.29h-16.17v5.03h19.13Z"/>
+  <path class="st0" d="M138.32,3.34v38.25h-10.6l-14.54-17.38v17.38h-12.57V3.34h10.6l14.54,17.38V3.34h12.57Z"/>
+  <path class="st0" d="M169.53,34.92h-14.54l-2.57,6.67h-13.12L156.03,3.34h12.68l16.72,38.25h-13.33l-2.57-6.67ZM165.97,25.64l-3.72-9.62-3.72,9.62h7.43Z"/>
+  <path class="st0" d="M235.81,31.76l3.61,3.06-6.61,7.49-4.04-3.5c-3.66,2.35-7.98,3.66-12.79,3.66-9.18,0-15.96-4.7-15.96-11.09,0-4.81,2.35-8.2,7.43-11.04-2.24-2.4-3.28-4.81-3.28-7.32,0-6.12,5.46-10.33,13.77-10.33,7.59,0,12.68,3.77,12.68,9.67,0,3.88-2.13,6.83-6.61,9.34l4.04,3.44c.66-1.48,1.15-3.17,1.47-4.97l9.89,2.95c-.71,3.17-1.91,6.07-3.61,8.63ZM221.22,32.36l-6.99-6.01c-1.53,1.09-2.13,2.24-2.13,3.66,0,1.81,1.75,3.28,4.81,3.28,1.47,0,2.95-.33,4.32-.93ZM215.37,12.85c0,.93.38,1.64,1.91,3.06,2.24-1.2,3.01-2.24,3.01-3.28,0-1.15-.77-1.97-2.3-1.97-1.69,0-2.62.93-2.62,2.19Z"/>
+  <path class="st0" d="M256.86,22.47c0-11.75,9.02-20,21.31-20,7.49,0,13.39,2.73,17.16,7.65l-8.14,7.27c-2.24-2.84-4.92-4.48-8.36-4.48-5.35,0-8.96,3.72-8.96,9.56s3.61,9.56,8.96,9.56c3.44,0,6.12-1.64,8.36-4.48l8.14,7.27c-3.77,4.92-9.67,7.65-17.16,7.65-12.3,0-21.31-8.25-21.31-20Z"/>
+  <path class="st0" d="M295.6,22.47c0-11.59,9.12-20,21.58-20s21.58,8.42,21.58,20-9.12,20-21.58,20-21.58-8.42-21.58-20ZM325.76,22.47c0-5.96-3.83-9.56-8.58-9.56s-8.58,3.61-8.58,9.56,3.83,9.56,8.58,9.56,8.58-3.61,8.58-9.56Z"/>
 </svg>

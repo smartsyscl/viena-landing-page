@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Users, Award, CheckCircle, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: "Concesión de cafetería escolar en Chile",
@@ -21,14 +22,6 @@ export default function HomePage() {
           <h1 id="hero-title">
             Profesionalizamos la cafetería escolar con una operación integral y trazable.
           </h1>
-          <p className="lead">
-            Concesiones Viena & Co. integra servicio de concesión y tecnología para que
-            sostenedores y equipos directivos gestionen la alimentación escolar con más
-            control, eficiencia y estándares modernos.
-          </p>
-          <a className="cta" href="#contacto">
-            Solicitar reunión institucional
-          </a>
         </div>
       </section>
 
@@ -45,11 +38,14 @@ export default function HomePage() {
 
       <section className="section surface" id="solucion" aria-labelledby="solucion-title" data-animate>
         <div className="container stack-sm">
-          <h2 id="solucion-title">Nuestra solución integral</h2>
+          <h2 id="solucion-title">
+            <Award className="inline-icon" /> Nuestra solución integral
+          </h2>
           <p>
             Combinamos concesión profesional de cafetería escolar con un sistema digital de
             compra con pulsera para ordenar flujos, mejorar trazabilidad y entregar reportes
-            útiles para la gestión del colegio.
+            útiles para la gestión del colegio. Nuestra plataforma permite estadísticas en
+            tiempo real, control de inventarios y configuración de menús.
           </p>
         </div>
       </section>
@@ -86,15 +82,15 @@ export default function HomePage() {
           <h2 id="beneficios-title">Beneficios para el colegio y sostenedor</h2>
           <div className="cards">
             <article className="card">
-              <h3>Gestión con datos</h3>
+              <h3><CheckCircle className="inline-icon" /> Gestión con datos</h3>
               <p>Información clara para decisiones estratégicas y seguimiento operativo.</p>
             </article>
             <article className="card">
-              <h3>Operación eficiente</h3>
+              <h3><CheckCircle className="inline-icon" /> Operación eficiente</h3>
               <p>Flujos más ordenados, menor fricción y mayor continuidad del servicio.</p>
             </article>
             <article className="card">
-              <h3>Propuesta institucional moderna</h3>
+              <h3><CheckCircle className="inline-icon" /> Propuesta institucional moderna</h3>
               <p>
                 Un modelo alineado con estándares actuales de administración escolar.
               </p>
@@ -105,18 +101,18 @@ export default function HomePage() {
 
       <section className="section" id="servicios" aria-labelledby="servicios-title" data-animate>
         <div className="container">
-          <h2 id="servicios-title">Servicios</h2>
+          <h2 id="servicios-title"><Settings className="inline-icon" /> Servicios</h2>
           <div className="cards">
             <article className="card">
-              <h3>Concesión integral de cafetería</h3>
+              <h3><CheckCircle className="inline-icon" /> Concesión integral de cafetería</h3>
               <p>Administración operativa del servicio bajo estándares definidos.</p>
             </article>
             <article className="card">
-              <h3>Sistema inteligente de compra</h3>
+              <h3><CheckCircle className="inline-icon" /> Sistema inteligente de compra</h3>
               <p>Compra con pulsera y herramientas de control para el establecimiento.</p>
             </article>
             <article className="card">
-              <h3>Soporte y mejora de gestión</h3>
+              <h3><CheckCircle className="inline-icon" /> Soporte y mejora de gestión</h3>
               <p>Monitoreo, análisis y acompañamiento para sostener resultados.</p>
             </article>
           </div>
@@ -136,13 +132,16 @@ export default function HomePage() {
 
       <section className="section" id="testimonios" aria-labelledby="testimonios-title" data-animate>
         <div className="container">
-          <h2 id="testimonios-title">Testimonios</h2>
+          <h2 id="testimonios-title"><Star className="inline-icon" /> Testimonios</h2>
           <div className="cards testimonials">
             <blockquote className="card">
               <p>
                 “Hoy contamos con indicadores de operación y trazabilidad semanal para
                 reuniones de gestión con el sostenedor.”
               </p>
+              <div className="rating">
+                <Star /> <Star /> <Star /> <Star /> <Star />
+              </div>
               <cite>Dirección Administrativa, colegio particular subvencionado</cite>
             </blockquote>
             <blockquote className="card">
@@ -150,6 +149,9 @@ export default function HomePage() {
                 “La implementación fue ordenada y fortaleció nuestra propuesta institucional
                 de alimentación escolar.”
               </p>
+              <div className="rating">
+                <Star /> <Star /> <Star /> <Star /> <Star />
+              </div>
               <cite>Rectoría, establecimiento educacional en la RM</cite>
             </blockquote>
           </div>

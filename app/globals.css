@@ -1,14 +1,14 @@
 @import "tailwindcss";
-
 :root {
-  --background: #f7f7f6;
+  /* palette adjusted to match the reference screenshot */
+  --background: #fafafa;
   --surface: #ffffff;
   --surface-muted: #f3f4f4;
-  --text-primary: #272829;
+  --text-primary: #101010;
   --text-secondary: #5a5f63;
   --border: #e2e5e6;
-  --brand-yellow: #ffb32c;
-  --brand-dark: #272829;
+  --brand-yellow: #ffcc00;
+  --brand-dark: #101010;
   --accent-soft: #88a894;
 }
 
@@ -20,6 +20,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth; /* enable animated smooth scrolling */
 }
 
 body {
@@ -143,7 +144,7 @@ body[data-scrolled="true"] .site-header {
 }
 
 .brand-logo {
-  height: 44px;
+  height: 30px;
   width: auto;
 }
 
@@ -161,55 +162,60 @@ body[data-scrolled="true"] .site-header {
 
 .nav-list {
   list-style: none;
+  display: flex;
+  gap: 2rem;
   margin: 0;
   padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
 }
 
+/* ===== LINKS ===== */
+
 .nav-list a {
-  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: var(--brand-dark);
   font-weight: 600;
   font-size: 0.95rem;
-  padding: 0.2rem 0;
-}
-
-.nav-list a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.15rem;
-  width: 100%;
-  height: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
   background: var(--brand-yellow);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.18s ease;
+  border-radius: 0.5rem;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.nav-list a:hover::after {
-  transform: scaleX(1);
+.nav-list a:hover {
+  background: #ffbf46;
 }
+
+.nav-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.3rem;
+}
+
+/* remove underline animation when using button style */
+.nav-list a::after {
+  content: none;
+}
+
+
 
 .nav-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.55rem;
-  text-decoration: none;
-  border-radius: 0.5rem;
   background: var(--brand-yellow);
   color: var(--brand-dark);
-  border: 1px solid #f5a20a;
-  padding: 0.5rem 0.95rem;
-  font-weight: 700;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
 
 .nav-cta:hover {
-  background: #ffbf46;
+  background: #e6a322;
+  transform: translateY(-2px);
 }
 
 .menu-toggle,
@@ -238,11 +244,29 @@ body[data-scrolled="true"] .site-header {
 }
 
 .hero {
-  background: linear-gradient(180deg, #fff9ef 0%, #fbfbfa 100%);
+  background: linear-gradient(180deg,#eef7ff 0%,#fff 100%);
+  padding: 8rem 0;
+  text-align: center;
 }
 
 .lead {
   max-width: 68ch;
+}
+
+.hero h1 {
+  font-size: clamp(3rem,7vw,5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--brand-dark);
+  margin: 0 auto 1rem;
+}
+
+.hero .cta {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  border-radius: 999px;
+  background: var(--brand-yellow);
 }
 
 .cta {
@@ -265,6 +289,21 @@ body[data-scrolled="true"] .site-header {
   transform: translateY(-1px);
   background: #1c1d1e;
   border-color: #1c1d1e;
+}
+
+.inline-icon {
+  vertical-align: middle;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.4rem;
+  color: var(--brand-dark);
+}
+
+.rating {
+  margin: 0.6rem 0 0;
+  color: #ffbf46;
+  display: flex;
+  gap: 0.2rem;
 }
 
 .steps {

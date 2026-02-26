@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Home, Users, Settings, Mail } from 'lucide-react';
 
 const navigation = [
-  { name: "Problema", href: "/#problema" },
-  { name: "Solución", href: "/#solucion" },
-  { name: "Beneficios", href: "/#beneficios" },
-  { name: "Servicios", href: "/#servicios" },
+  { name: "Inicio", href: "/#inicio", icon: Home },
+  { name: "Quiénes Somos", href: "/#empresa", icon: Users },
+  { name: "Servicios", href: "/#servicios", icon: Settings },
+  { name: "Contáctanos", href: "/#contacto", icon: Mail },
 ];
 
 export function Header() {
@@ -35,13 +36,13 @@ export function Header() {
             <ul className="nav-list">
               {navigation.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href}>{item.name}</Link>
+                  <Link href={item.href} className="nav-link">
+                    {item.icon && <item.icon className="nav-icon" />}
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
-            <Link className="nav-cta" href="/#contacto">
-              Contacto
-            </Link>
           </nav>
         </div>
       </div>
