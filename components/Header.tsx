@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+<<<<<<< HEAD
 import { Home, Users, Settings, Mail } from 'lucide-react';
 
 const navigation = [
@@ -7,6 +8,17 @@ const navigation = [
   { name: "Quiénes Somos", href: "/#empresa", icon: Users },
   { name: "Servicios", href: "/#servicios", icon: Settings },
   { name: "Contáctanos", href: "/#contacto", icon: Mail },
+=======
+import { Home, Users, Settings, Mail, Images, CircleHelp } from 'lucide-react';
+
+const navigation = [
+  { name: "Inicio", href: "#inicio", icon: Home },
+  { name: "Quiénes Somos", href: "#about", icon: Users },
+  { name: "Servicios", href: "#servicios", icon: Settings },
+  { name: "Galería", href: "#galeria", icon: Images },
+  { name: "FAQ", href: "#faq", icon: CircleHelp },
+  { name: "Contáctanos", href: "#contacto", icon: Mail },
+>>>>>>> feature/iconos-lucide
 ];
 
 export function Header() {
@@ -15,7 +27,7 @@ export function Header() {
       <div className="container navbar">
         <Link className="brand" href="/" aria-label="Ir a la página principal de Concesiones Viena y Co">
           <Image
-            src="/logos/placeholder-logo.svg"
+            src="/logos/vv_logo_web-10.svg"
             alt="Concesiones Viena y Co"
             width={220}
             height={44}
