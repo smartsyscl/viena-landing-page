@@ -15,6 +15,9 @@ export function Footer() {
           <p className="footer-title">Contacto comercial</p>
           <a href="mailto:contacto@concesionesviena.cl">contacto@concesionesviena.cl</a>
           <a href="tel:+56976543210">+56 9 7654 3210</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#faq">Preguntas frecuentes</a>
+          <a href="#legal">Información comercial y privacidad</a>
         </div>
       </div>
       <p className="container footer-legal">

@@ -1,11 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Home, Users, Settings, Mail, Images, CircleHelp } from 'lucide-react';
 
 const navigation = [
-  { name: "Problema", href: "/#problema" },
-  { name: "Solución", href: "/#solucion" },
-  { name: "Beneficios", href: "/#beneficios" },
-  { name: "Servicios", href: "/#servicios" },
+  { name: "Inicio", href: "#inicio", icon: Home },
+  { name: "Quiénes Somos", href: "#about", icon: Users },
+  { name: "Servicios", href: "#servicios", icon: Settings },
+  { name: "Galería", href: "#galeria", icon: Images },
+  { name: "FAQ", href: "#faq", icon: CircleHelp },
+  { name: "Contáctanos", href: "#contacto", icon: Mail },
 ];
 
 export function Header() {
@@ -14,7 +17,7 @@ export function Header() {
       <div className="container navbar">
         <Link className="brand" href="/" aria-label="Ir a la página principal de Concesiones Viena y Co">
           <Image
-            src="/logos/placeholder-logo.svg"
+            src="/logos/vv_logo_web-10.svg"
             alt="Concesiones Viena y Co"
             width={220}
             height={44}
@@ -35,13 +38,13 @@ export function Header() {
             <ul className="nav-list">
               {navigation.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href}>{item.name}</Link>
+                  <Link href={item.href} className="nav-link">
+                    {item.icon && <item.icon className="nav-icon" />}
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
-            <Link className="nav-cta" href="/#contacto">
-              Contacto
-            </Link>
           </nav>
         </div>
       </div>

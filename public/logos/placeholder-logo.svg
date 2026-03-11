@@ -1,9 +1,0 @@
-<svg width="220" height="44" viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
-  <title id="logoTitle">Placeholder logo Concesiones Viena y Co</title>
-  <desc id="logoDesc">Logotipo temporal con icono y nombre corporativo.</desc>
-  <rect x="0.5" y="0.5" width="43" height="43" rx="8" fill="#FFF7EA" stroke="#FFB32C"/>
-  <path d="M13 28L22 15L31 28" stroke="#272829" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="22" cy="13.5" r="2.2" fill="#FFB32C"/>
-  <text x="54" y="18" fill="#272829" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.7">CONCESIONES</text>
-  <text x="54" y="33" fill="#272829" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Viena &amp; Co.</text>
-</svg>

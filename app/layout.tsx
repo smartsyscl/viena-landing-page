@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-
+import { ScrollAnimator } from "./ScrollAnimator";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -15,7 +15,7 @@ const siteUrl = "https://www.concesionesviena.cl";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Concesiones Viena & Co. | Concesión de cafetería escolar inteligente",
+    default: "Viena & Co. | Cafetería - Casino",
     template: "%s | Concesiones Viena & Co.",
   },
   description:
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/favicon/favicon-placeholder.svg",
+    icon: "/favicon/favicon_v.ico",
   },
   openGraph: {
     type: "website",
@@ -53,31 +53,6 @@ const organizationSchema = {
   telephone: "+56 9 7654 3210",
 };
 
-const scrollScript = `
-(() => {
-  const onScroll = () => {
-    document.body.dataset.scrolled = window.scrollY > 12 ? 'true' : 'false';
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
-
-  const bindAnimations = () => {
-    document.querySelectorAll('[data-animate]').forEach((element) => {
-      observer.observe(element);
-    });
-  };
-
-  onScroll();
-  bindAnimations();
-  window.addEventListener('scroll', onScroll, { passive: true });
-})();
-`;
 
 export default function RootLayout({
   children,
@@ -93,11 +68,11 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <ScrollAnimator />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <script dangerouslySetInnerHTML={{ __html: scrollScript }} />
       </body>
     </html>
   );
