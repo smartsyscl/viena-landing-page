@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Award, CheckCircle, Star, Settings } from "lucide-react";
+import ServiceGallery, { GalleryImage } from "../components/ui/ServiceGallery";
 
 export const metadata: Metadata = {
   title: "Concesión de Cafetería Escolar en Chile | Viena & Co.",
@@ -19,8 +21,6 @@ export const metadata: Metadata = {
 
 const whatsappUrl =
   "https://wa.me/56976543210?text=Hola%2C%20quiero%20coordinar%20una%20reuni%C3%B3n%20sobre%20concesi%C3%B3n%20de%20cafeter%C3%ADa%20escolar.";
-
-import ServiceGallery, { GalleryImage } from "../components/ui/ServiceGallery";
 
 const siteUrl = "https://www.concesionesviena.cl";
 

@@ -1,14 +1,5 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
-<<<<<<< HEAD
-import { Home, Users, Settings, Mail } from 'lucide-react';
-
-const navigation = [
-  { name: "Inicio", href: "/#inicio", icon: Home },
-  { name: "Quiénes Somos", href: "/#empresa", icon: Users },
-  { name: "Servicios", href: "/#servicios", icon: Settings },
-  { name: "Contáctanos", href: "/#contacto", icon: Mail },
-=======
 import { Home, Users, Settings, Mail, Images, CircleHelp } from 'lucide-react';
 
 const navigation = [
@@ -18,7 +9,6 @@ const navigation = [
   { name: "Galería", href: "#galeria", icon: Images },
   { name: "FAQ", href: "#faq", icon: CircleHelp },
   { name: "Contáctanos", href: "#contacto", icon: Mail },
->>>>>>> feature/iconos-lucide
 ];
 
 export function Header() {

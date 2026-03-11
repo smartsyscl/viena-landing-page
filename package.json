@@ -9,12 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "lucide-react": "^0.575.0",
-=======
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.576.0",
->>>>>>> feature/iconos-lucide
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
