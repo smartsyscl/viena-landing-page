@@ -17,7 +17,6 @@ export function Footer() {
           <a href="tel:+56976543210">+56 9 7654 3210</a>
           <a href="#servicios">Servicios</a>
           <a href="#faq">Preguntas frecuentes</a>
-          <a href="#legal">Información comercial y privacidad</a>
         </div>
       </div>
       <p className="container footer-legal">

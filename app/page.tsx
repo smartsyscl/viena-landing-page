@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import {
-  Award,
-  CheckCircle,
   Star,
   UtensilsCrossed,
   Smartphone,
@@ -11,6 +9,7 @@ import {
   Handshake,
 } from "lucide-react";
 import ServiceGallery, { GalleryImage } from "../components/ui/ServiceGallery";
+import TestimonialsCarousel from "../components/ui/TestimonialsCarousel";
 
 export const metadata: Metadata = {
   title: "Concesión de Cafetería Escolar en Chile | Viena & Co.",
@@ -107,34 +106,65 @@ export default function HomePage() {
 
   const serviceItems = [
     {
-      title: "Concesión integral de cafetería",
-      description: "Operación completa del casino escolar con estándares definidos y seguimiento permanente.",
+      title: "Concesión integral",
+      description: "Operación del casino escolar con estándares claros y seguimiento continuo.",
       icon: UtensilsCrossed,
     },
     {
-      title: "Sistema inteligente de compra",
-      description: "Compra con pulsera y flujo digital para mejorar tiempos y experiencia de atención.",
+      title: "Compra inteligente",
+      description: "Pulsera y flujo digital para agilizar atención y orden operativo.",
       icon: Smartphone,
     },
     {
       title: "Reportes y trazabilidad",
-      description: "Indicadores de consumo y desempeño para decisiones de dirección y sostenedor.",
+      description: "Indicadores clave para decisiones de dirección y sostenedor.",
       icon: BarChart3,
     },
     {
       title: "Control de inventario",
-      description: "Visibilidad de stock y reposición para sostener continuidad del servicio.",
+      description: "Visibilidad de stock y reposición para sostener continuidad.",
       icon: Boxes,
     },
     {
       title: "Protocolos y cumplimiento",
-      description: "Estandarización operacional para mantener calidad y orden en la gestión diaria.",
+      description: "Procesos estandarizados para mantener calidad y orden diario.",
       icon: ShieldCheck,
     },
     {
-      title: "Soporte y mejora continua",
-      description: "Acompañamiento del equipo para optimizar resultados durante el año escolar.",
+      title: "Mejora continua",
+      description: "Acompañamiento del equipo para optimizar resultados del servicio.",
       icon: Handshake,
+    },
+  ];
+
+  const testimonials = [
+    {
+      quote:
+        "Hoy contamos con indicadores de operación y trazabilidad semanal para reuniones de gestión con el sostenedor.",
+      author: "Dirección Administrativa, colegio particular subvencionado",
+    },
+    {
+      quote:
+        "La implementación fue ordenada y fortaleció nuestra propuesta institucional de alimentación escolar.",
+      author: "Rectoría, establecimiento educacional en la RM",
+    },
+  ];
+
+  const solutionItems = [
+    {
+      id: "01",
+      title: "Compra digital sin fricción",
+      description: "Implementación por etapas para modernizar el servicio sin detener la operación.",
+    },
+    {
+      id: "02",
+      title: "Visibilidad para la gestión",
+      description: "Métricas en tiempo real para dirección, administración y sostenedor.",
+    },
+    {
+      id: "03",
+      title: "Control operativo continuo",
+      description: "Inventario, menús y protocolos integrados en un flujo más claro y confiable.",
     },
   ];
 
@@ -177,77 +207,45 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* El Desafío Section */}
-      <section className="section" id="challenge" aria-labelledby="challenge-title" data-animate>
+      {/* Desafío + Solución */}
+      <section className="section challenge-solution" id="solucion" aria-labelledby="solucion-title" data-animate>
         <div className="container stack-sm">
-          <h2 id="challenge-title">El desafío actual en cafeterías escolares</h2>
-          <p>
-            En muchos establecimientos persisten procesos manuales, poca visibilidad de los
-            consumos, tiempos de atención extensos y dificultad para controlar la operación
-            diaria. Esto limita la toma de decisiones y afecta la experiencia de la comunidad.
-          </p>
-        </div>
-      </section>
-
-      {/* Nuestra Solución Section */}
-      <section className="section surface" id="solucion" aria-labelledby="solucion-title" data-animate>
-        <div className="container stack-sm">
-          <h2 id="solucion-title">
-            <Award className="inline-icon" /> Nuestra solución integral
-          </h2>
-          <p>
-            Combinamos concesión profesional de cafetería escolar con un sistema digital de
-            compra con pulsera para ordenar flujos, mejorar trazabilidad y entregar reportes
-            útiles para la gestión del colegio. Nuestra plataforma permite estadísticas en
-            tiempo real, control de inventarios y configuración de menús.
-          </p>
-        </div>
-      </section>
-
-      <section className="section" id="funcionamiento" aria-labelledby="funcionamiento-title" data-animate>
-        <div className="container">
-          <h2 id="funcionamiento-title">Cómo funciona</h2>
-          <ol className="steps">
-            <li>
-              <h3>1. Diagnóstico institucional</h3>
-              <p>Analizamos operación, objetivos y requerimientos del establecimiento.</p>
-            </li>
-            <li>
-              <h3>2. Implementación del modelo de concesión</h3>
-              <p>Operamos la cafetería con procesos, protocolos y seguimiento continuo.</p>
-            </li>
-            <li>
-              <h3>3. Activación del sistema digital</h3>
+          <h2 id="solucion-title">Del desafío al control operativo</h2>
+          <div className="challenge-solution-shell">
+            <article className="challenge-card challenge-card-solution">
+              <p className="challenge-kicker">Respuesta Viena &amp; Co.</p>
+              <h3>Una solución integral, simple y medible</h3>
               <p>
-                Habilitamos compras con pulsera y panel de control para trazabilidad y
-                visibilidad administrativa.
+                Frente a procesos manuales, baja visibilidad de consumos y tiempos de atención
+                extensos, integramos operación profesional y tecnología en un solo modelo de
+                gestión para ordenar la cafetería escolar sin complejizar la adopción.
               </p>
-            </li>
-            <li>
-              <h3>4. Mejora continua</h3>
-              <p>Entregamos soporte y métricas para optimizar el servicio en el tiempo.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
 
-      <section className="section surface" id="beneficios" aria-labelledby="beneficios-title" data-animate>
-        <div className="container">
-          <h2 id="beneficios-title">Beneficios para el colegio y sostenedor</h2>
-          <div className="cards">
-            <article className="card">
-              <h3><CheckCircle className="inline-icon" /> Gestión con datos</h3>
-              <p>Información clara para decisiones estratégicas y seguimiento operativo.</p>
-            </article>
-            <article className="card">
-              <h3><CheckCircle className="inline-icon" /> Operación eficiente</h3>
-              <p>Flujos más ordenados, menor fricción y mayor continuidad del servicio.</p>
-            </article>
-            <article className="card">
-              <h3><CheckCircle className="inline-icon" /> Propuesta institucional moderna</h3>
-              <p>
-                Un modelo alineado con estándares actuales de administración escolar.
-              </p>
+              <div className="solution-points-desktop" aria-label="Pilares de la solución">
+                {solutionItems.map((item) => (
+                  <article key={item.id} className="solution-point-card">
+                    <span className="solution-point-index">{item.id}</span>
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+                  </article>
+                ))}
+              </div>
+
+              <div className="solution-points-mobile" aria-label="Pilares de la solución en móvil">
+                {solutionItems.map((item) => (
+                  <details key={item.id} className="solution-accordion">
+                    <summary>
+                      <span className="solution-point-index">{item.id}</span>
+                      <span className="solution-accordion-title">{item.title}</span>
+                    </summary>
+                    <div className="solution-accordion-body">
+                      <div className="solution-accordion-content">
+                        <p>{item.description}</p>
+                      </div>
+                    </div>
+                  </details>
+                ))}
+              </div>
             </article>
           </div>
         </div>
@@ -261,9 +259,8 @@ export default function HomePage() {
               <h2 id="servicios-title" className="services-headline">
                 Profesionaliza tu <span className="services-highlight">cafetería escolar</span> con gestión y control.
               </h2>
-              <p>
-                Diseñamos e implementamos un modelo integral para colegios que buscan profesionalizar
-                su cafetería escolar con visibilidad operativa y soporte continuo.
+              <p className="services-copy">
+                Implementamos un modelo integral con operación, control y soporte continuo.
               </p>
             </div>
 
@@ -306,36 +303,20 @@ export default function HomePage() {
       <section className="section" id="testimonios" aria-labelledby="testimonios-title" data-animate>
         <div className="container">
           <h2 id="testimonios-title">Testimonios</h2>
-          <div className="cards testimonials">
-            <blockquote className="card">
-              <p>
-                “Hoy contamos con indicadores de operación y trazabilidad semanal para
-                reuniones de gestión con el sostenedor.”
-              </p>
-              <div className="rating">
-                <Star /> <Star /> <Star /> <Star /> <Star />
-              </div>
-              <cite>Dirección Administrativa, colegio particular subvencionado</cite>
-            </blockquote>
-            <blockquote className="card">
-              <p>
-                “La implementación fue ordenada y fortaleció nuestra propuesta institucional
-                de alimentación escolar.”
-              </p>
-              <div className="rating">
-                <Star /> <Star /> <Star /> <Star /> <Star />
-              </div>
-              <cite>Rectoría, establecimiento educacional en la RM</cite>
-            </blockquote>
+          <div className="testimonials-desktop" aria-label="Testimonios institucionales">
+            {testimonials.map((item) => (
+              <blockquote key={item.author} className="testimonial-card">
+                <p className="testimonial-quote">“{item.quote}”</p>
+                <div className="rating" aria-label="Calificación de 5 estrellas">
+                  <Star /> <Star /> <Star /> <Star /> <Star />
+                </div>
+                <cite>{item.author}</cite>
+              </blockquote>
+            ))}
           </div>
 
-          <div className="section-cta">
-            <p>
-              ¿Quieres evaluar una propuesta para tu establecimiento?
-            </p>
-            <a className="cta" href="#contacto">
-              Agendar reunión
-            </a>
+          <div className="testimonials-mobile">
+            <TestimonialsCarousel items={testimonials} />
           </div>
         </div>
       </section>
@@ -351,20 +332,6 @@ export default function HomePage() {
               </details>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="section" id="legal" aria-labelledby="legal-title" data-animate>
-        <div className="container stack-sm">
-          <h2 id="legal-title">Información comercial y privacidad</h2>
-          <p>
-            Concesiones Viena & Co. atiende solicitudes comerciales de colegios y sostenedores en Chile.
-            El contacto se realiza vía correo o WhatsApp para coordinación de reuniones y envío de propuestas.
-          </p>
-          <p>
-            Si necesitas información sobre tratamiento de datos de contacto, puedes solicitarla al correo comercial
-            indicado en el pie de página.
-          </p>
         </div>
       </section>
 
