@@ -38,10 +38,10 @@ export function Header() {
             <ul className="nav-list">
               {navigation.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="nav-link">
+                  <a href={item.href} className="nav-link">
                     {item.icon && <item.icon className="nav-icon" />}
                     {item.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

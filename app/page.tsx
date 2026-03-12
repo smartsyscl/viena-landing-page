@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
-import { Award, CheckCircle, Star, Settings } from "lucide-react";
+import {
+  Award,
+  CheckCircle,
+  Star,
+  UtensilsCrossed,
+  Smartphone,
+  BarChart3,
+  Boxes,
+  ShieldCheck,
+  Handshake,
+} from "lucide-react";
 import ServiceGallery, { GalleryImage } from "../components/ui/ServiceGallery";
 
 export const metadata: Metadata = {
@@ -95,6 +105,39 @@ export default function HomePage() {
     })),
   };
 
+  const serviceItems = [
+    {
+      title: "Concesión integral de cafetería",
+      description: "Operación completa del casino escolar con estándares definidos y seguimiento permanente.",
+      icon: UtensilsCrossed,
+    },
+    {
+      title: "Sistema inteligente de compra",
+      description: "Compra con pulsera y flujo digital para mejorar tiempos y experiencia de atención.",
+      icon: Smartphone,
+    },
+    {
+      title: "Reportes y trazabilidad",
+      description: "Indicadores de consumo y desempeño para decisiones de dirección y sostenedor.",
+      icon: BarChart3,
+    },
+    {
+      title: "Control de inventario",
+      description: "Visibilidad de stock y reposición para sostener continuidad del servicio.",
+      icon: Boxes,
+    },
+    {
+      title: "Protocolos y cumplimiento",
+      description: "Estandarización operacional para mantener calidad y orden en la gestión diaria.",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Soporte y mejora continua",
+      description: "Acompañamiento del equipo para optimizar resultados durante el año escolar.",
+      icon: Handshake,
+    },
+  ];
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
@@ -115,6 +158,22 @@ export default function HomePage() {
           <a className="cta" href="#contacto">
             Solicitar reunión institucional
           </a>
+        </div>
+      </section>
+
+      <section className="section surface" id="about" aria-labelledby="about-title" data-animate>
+        <div className="container">
+          <div className="about-content">
+            <h2 id="about-title" className="about-title">Quiénes Somos</h2>
+            <p className="about-highlight">
+              Somos Concesiones Viena & Co., empresa chilena especializada en concesión de cafetería y
+              casino escolar para colegios y sostenedores.
+            </p>
+            <p className="about-body">
+              Integramos operación profesional, tecnología de compra y trazabilidad para transformar la
+              gestión de alimentación escolar en un servicio más moderno, medible y sostenible.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -194,29 +253,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="servicios" aria-labelledby="servicios-title" data-animate>
+      <section className="section services-showcase" id="servicios" aria-labelledby="servicios-title" data-animate>
         <div className="container">
-          <h2 id="servicios-title"><Settings className="inline-icon" /> Servicios</h2>
-          <div className="cards">
-            <article className="card">
-              <h3><CheckCircle className="inline-icon" /> Concesión integral de cafetería</h3>
-              <p>Administración operativa del servicio bajo estándares definidos.</p>
-            </article>
-            <article className="card">
-              <h3><CheckCircle className="inline-icon" /> Sistema inteligente de compra</h3>
-              <p>Compra con pulsera y herramientas de control para el establecimiento.</p>
-            </article>
-            <article className="card">
-              <h3><CheckCircle className="inline-icon" /> Soporte y mejora de gestión</h3>
-              <p>Monitoreo, análisis y acompañamiento para sostener resultados.</p>
-            </article>
+          <div className="services-split">
+            <div className="services-intro">
+              <p className="services-kicker">Servicios institucionales</p>
+              <h2 id="servicios-title" className="services-headline">
+                Profesionaliza tu <span className="services-highlight">cafetería escolar</span> con gestión y control.
+              </h2>
+              <p>
+                Diseñamos e implementamos un modelo integral para colegios que buscan profesionalizar
+                su cafetería escolar con visibilidad operativa y soporte continuo.
+              </p>
+            </div>
+
+            <div className="services-grid" aria-label="Listado de servicios">
+              {serviceItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <article key={item.title} className="service-item">
+                    <span className="service-icon" aria-hidden="true">
+                      <Icon />
+                    </span>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </article>
+                );
+              })}
+            </div>
           </div>
 
-          <div className="section-cta">
-            <p>
-              Si buscas una empresa para concesión de cafetería escolar con foco en continuidad operacional y control,
-              conversemos.
-            </p>
+          <div className="services-cta">
             <a className="cta" href="#contacto">
               Hablar con el equipo comercial
             </a>
