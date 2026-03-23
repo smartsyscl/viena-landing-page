@@ -1,39 +1,56 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ScrollAnimator } from "./ScrollAnimator";
+import { Analytics } from "@/components/analytics/Analytics";
+import { siteConfig } from "@/lib/site";
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
 });
 
-const siteUrl = "https://www.concesionesviena.cl";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: "Viena & Co. | Cafetería - Casino",
+    default: siteConfig.title,
     template: "%s | Concesiones Viena & Co.",
   },
-  description:
-    "Concesiones Viena & Co. moderniza cafeterías escolares en Chile con concesión integral y sistema inteligente de compra para colegios y sostenedores.",
+  description: siteConfig.description,
   alternates: {
     canonical: "/",
   },
   icons: {
-    icon: "/favicon/favicon_v.ico",
+    icon: siteConfig.favicon,
+    shortcut: siteConfig.favicon,
   },
   openGraph: {
     type: "website",
-    locale: "es_CL",
-    url: siteUrl,
-    siteName: "Concesiones Viena & Co.",
+    locale: siteConfig.locale,
+    url: siteConfig.siteUrl,
+    siteName: siteConfig.companyName,
     title: "Concesiones Viena & Co. | Solución institucional para cafeterías escolares",
-    description:
-      "Servicio B2B para colegios y sostenedores: operación de cafetería, digitalización y trazabilidad para una gestión moderna.",
+    description: siteConfig.ogDescription,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Concesiones Viena & Co. - solución institucional para cafeterías escolares",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Concesiones Viena & Co. | Solución institucional para cafeterías escolares",
+    description: siteConfig.ogDescription,
+    images: [siteConfig.twitterImage],
+  },
+  verification: {
+    google: siteConfig.googleSiteVerification,
   },
   robots: {
     index: true,
@@ -41,16 +58,20 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Concesiones Viena & Co.",
-  url: siteUrl,
+  name: siteConfig.companyName,
+  url: siteConfig.siteUrl,
   description:
     "Empresa chilena especializada en concesión de cafeterías escolares y sistemas inteligentes de gestión para colegios.",
   areaServed: "CL",
-  email: "contacto@concesionesviena.cl",
-  telephone: "+56 9 7654 3210",
+  email: siteConfig.email,
+  telephone: siteConfig.phoneDisplay,
 };
 
 
@@ -60,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es-CL" className={inter.variable}>
+    <html lang={siteConfig.language} className={inter.variable}>
       <body data-scrolled="false">
         <a className="skip-link" href="#main-content">
           Saltar al contenido principal
@@ -69,6 +90,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <ScrollAnimator />
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

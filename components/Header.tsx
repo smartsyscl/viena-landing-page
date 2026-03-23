@@ -1,13 +1,12 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
-import { Home, Users, Settings, Mail, Images, CircleHelp } from 'lucide-react';
+import { Home, Users, Settings, Mail, Images } from 'lucide-react';
 
 const navigation = [
   { name: "Inicio", href: "#inicio", icon: Home },
   { name: "Quiénes Somos", href: "#about", icon: Users },
   { name: "Servicios", href: "#servicios", icon: Settings },
   { name: "Galería", href: "#galeria", icon: Images },
-  { name: "FAQ", href: "#faq", icon: CircleHelp },
   { name: "Contáctanos", href: "#contacto", icon: Mail },
 ];
 

@@ -24,7 +24,6 @@ export default function TestimonialsCarousel({ items }: TestimonialsCarouselProp
 
   useEffect(() => {
     if (!emblaApi) return;
-    onSelect();
     emblaApi.on("select", onSelect);
 
     return () => {
