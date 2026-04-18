@@ -4,7 +4,6 @@ import { useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import {
   ChevronDown,
   Search,
-  Printer,
   MessageCircle,
   ShoppingCart,
   CreditCard,
@@ -237,11 +236,6 @@ export default function LunchGuide({ sections, whatsappUrl }: LunchGuideProps) {
             <MessageCircle aria-hidden="true" />
             Contactar por WhatsApp
           </a>
-
-          <button type="button" className="guide-print" onClick={() => window.print()}>
-            <Printer aria-hidden="true" />
-            Imprimir instructivo
-          </button>
 
           <a className="guide-secondary-link" href="#contacto">
             Ver canal de contacto institucional

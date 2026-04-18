@@ -17,7 +17,7 @@ export function Footer() {
           <p className="footer-title">Contacto comercial</p>
           <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
           <a href={`tel:${siteConfig.phoneRaw}`}>{siteConfig.phoneDisplay}</a>
-          <a href="#servicios">Servicios</a>
+          <a href="/#servicios">Servicios</a>
         </div>
       </div>
       <p className="container footer-legal">

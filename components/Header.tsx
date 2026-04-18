@@ -1,13 +1,14 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
-import { Home, Users, Settings, Mail, Images } from 'lucide-react';
+import { Home, Users, Settings, Mail, Images, Apple } from 'lucide-react';
 
 const navigation = [
-  { name: "Inicio", href: "#inicio", icon: Home },
-  { name: "Quiénes Somos", href: "#about", icon: Users },
-  { name: "Servicios", href: "#servicios", icon: Settings },
-  { name: "Galería", href: "#galeria", icon: Images },
-  { name: "Contáctanos", href: "#contacto", icon: Mail },
+  { name: "Inicio", href: "/#inicio", icon: Home },
+  { name: "Quiénes Somos", href: "/#about", icon: Users },
+  { name: "Servicios", href: "/#servicios", icon: Settings },
+  { name: "Galería", href: "/#galeria", icon: Images },
+  { name: "Nutrición", href: "/nutricion", icon: Apple },
+  { name: "Contáctanos", href: "/#contacto", icon: Mail },
 ];
 
 export function Header() {

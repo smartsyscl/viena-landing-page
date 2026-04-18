@@ -25,7 +25,7 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
           <button type="button" className="cta" onClick={reset}>
             Reintentar
           </button>
-          <a className="cta cta-secondary" href="#inicio">
+          <a className="cta cta-secondary" href="/#inicio">
             Ir al inicio
           </a>
         </div>
