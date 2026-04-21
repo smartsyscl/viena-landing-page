@@ -6,13 +6,17 @@ import type { Category, Product, NutritionInfo } from "@/lib/products";
 
 /* ── Mapeo de campos para la tabla nutricional ─────────────── */
 const nutritionLabels: { key: keyof NutritionInfo; label: string; unit: string }[] = [
-  { key: "calorias", label: "Calorías", unit: "kcal" },
+  { key: "calorias", label: "Energía", unit: "kcal" },
   { key: "proteinas", label: "Proteínas", unit: "g" },
-  { key: "grasasTotales", label: "Grasas totales", unit: "g" },
+  { key: "grasasTotales", label: "Grasa total", unit: "g" },
   { key: "grasasSaturadas", label: "Grasas saturadas", unit: "g" },
-  { key: "carbohidratos", label: "Carbohidratos", unit: "g" },
-  { key: "azucares", label: "Azúcares", unit: "g" },
-  { key: "fibra", label: "Fibra dietética", unit: "g" },
+  { key: "grasasMonoinsaturadas", label: "Grasas monoinsaturadas", unit: "g" },
+  { key: "grasasPoliinsaturadas", label: "Grasas poliinsaturadas", unit: "g" },
+  { key: "grasasTrans", label: "Grasas trans", unit: "g" },
+  { key: "colesterol", label: "Colesterol", unit: "mg" },
+  { key: "carbohidratos", label: "H. de C. disponibles", unit: "g" },
+  { key: "fibra", label: "Fibra dietaria", unit: "g" },
+  { key: "azucares", label: "Azúcares totales", unit: "g" },
   { key: "sodio", label: "Sodio", unit: "mg" },
 ];
 
@@ -31,15 +35,17 @@ export default function NutritionBrowser({ categories }: { categories: Category[
   const [openProduct, setOpenProduct] = useState<string | null>(null);
 
   const activeCategory = categories.find((c) => c.key === activeTab);
+  const isSearching = search.trim().length > 0;
 
   const filtered = useMemo(() => {
-    if (!activeCategory) return [];
-    if (!search.trim()) return activeCategory.products;
     const q = normalize(search);
-    return activeCategory.products.filter(
-      (p) => normalize(p.nombre).includes(q) || normalize(p.descripcion).includes(q)
+    if (!isSearching) return activeCategory?.products ?? [];
+    return categories.flatMap((c) =>
+      c.products.filter(
+        (p) => normalize(p.nombre).includes(q) || normalize(p.descripcion).includes(q)
+      )
     );
-  }, [activeCategory, search]);
+  }, [activeCategory, categories, search, isSearching]);
 
   function toggleProduct(id: string) {
     setOpenProduct((prev) => (prev === id ? null : id));
@@ -135,6 +141,11 @@ function ProductAccordion({
       >
         <table className="nb-table">
           <thead>
+            <tr>
+              <th scope="col" colSpan={2} className="nb-table-porcion">
+                Porción: {product.nutricion.porcion}
+              </th>
+            </tr>
             <tr>
               <th scope="col">Nutriente</th>
               <th scope="col">Por porción</th>

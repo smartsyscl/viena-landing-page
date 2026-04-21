@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 export interface GalleryImage {
   src: string;
@@ -23,7 +24,7 @@ export const ServiceGallery: React.FC<ServiceGalleryProps> = ({
   images,
   showNav = true,
 }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000, stopOnInteraction: false })]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollTo = useCallback(

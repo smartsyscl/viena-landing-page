@@ -35,10 +35,10 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const galleryImages: GalleryImage[] = [
-    // Next.js serves files in `public` at the root path – don’t include "/public" in the URL
-    { src: "/gallery/servicio1.jpg", alt: "Equipo trabajando en cafetería escolar", width: 1200, height: 800 },
-    { src: "/gallery/servicio1.jpg", alt: "Vista interior de cafetería moderna", width: 1200, height: 800 },
-    { src: "/gallery/servicio1.jpg", alt: "Alimentos frescos y saludables sobre barra", width: 1200, height: 800 },
+    { src: "/gallery/1__cafeteria.jpeg",   alt: "Interior de cafetería escolar en operación",            width: 1200, height: 800 },
+    { src: "/gallery/2__catering.jpeg",    alt: "Servicio de catering para evento institucional",         width: 1200, height: 800 },
+    { src: "/gallery/2-2_catering.jpeg",   alt: "Preparación de bandejas en servicio de catering",        width: 1200, height: 800 },
+    { src: "/gallery/2_3__catering-c.jpeg",alt: "Mesa de coffee break para reunión corporativa",          width: 1200, height: 800 },
   ];
 
   const websiteSchema = {
