@@ -1,8 +1,8 @@
 const publicSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.concesionesviena.cl";
-const publicEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contacto@concesionesviena.cl";
-const publicPhoneRaw = process.env.NEXT_PUBLIC_CONTACT_PHONE_RAW || "+56976543210";
-const publicPhoneDisplay = process.env.NEXT_PUBLIC_CONTACT_PHONE_DISPLAY || "+56 9 7654 3210";
-const publicWhatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "56976543210";
+const publicEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contacto@viena-co.cl";
+const publicPhoneRaw = process.env.NEXT_PUBLIC_CONTACT_PHONE_RAW || "+56961075711";
+const publicPhoneDisplay = process.env.NEXT_PUBLIC_CONTACT_PHONE_DISPLAY || "+56 9 6107 5711";
+const publicWhatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "56961075711";
 
 export const siteConfig = {
   name: "Concesiones Viena & Co.",
