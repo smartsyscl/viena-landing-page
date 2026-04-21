@@ -13,7 +13,7 @@
 
 * { box-sizing: border-box; }
 
-html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: var(--font-inter), Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -58,7 +58,7 @@ body[data-scrolled="true"] .site-header {
   border-color: #e8e8e8;
   box-shadow: 0 4px 24px rgba(39, 40, 41, 0.08);
 }
-.navbar { min-height: 4rem; max-width: 960px; margin-inline: auto; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.navbar { min-height: 4rem; max-width: 960px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
 .brand { display: inline-flex; align-items: center; text-decoration: none; }
 .brand-logo { height: 38px; width: auto; transition: opacity 0.2s; }
 .brand:hover .brand-logo { opacity: 0.8; }
